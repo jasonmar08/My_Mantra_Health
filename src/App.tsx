@@ -1,18 +1,16 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom'
 import './App.css';
+import { Layout } from './layouts/Layout';
+import { Home } from './pages/Home/Home';
 
 const App = () => {
   return (
     <div className="App">
-      <header>
-        <h1>Jason's Mantra Health!</h1>
-      </header>
-      <main>
+      <Layout>
         <Routes>
-          <Route />
+          <Route path="/" element={<Home />} />
         </Routes>
-      </main>
+      </Layout>
     </div>
   );
 }
